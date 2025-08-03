@@ -1,10 +1,10 @@
 import { portfolioData } from "../../../data/api";
 import { loadIcon, getIconSVG } from "../../../lib/utils/icons";
+import { getYearsOfExperience } from "../../../lib/utils/experience";
 
 export class HomePage {
   static render(): string {
-    const currentYear = new Date().getFullYear();
-    const experience = currentYear - 2016;
+    const experience = getYearsOfExperience();
 
     return `
       <section class="page hero-page-modern">
