@@ -1,0 +1,144 @@
+/* Static Background Patterns */
+.section-bg-dots {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg-dots::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgba(60, 207, 145, 0.15) 1px, transparent 0);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-bg-grid {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(60, 207, 145, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(60, 207, 145, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-bg-hexagon {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg-hexagon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, transparent 8px, rgba(255, 255, 255, 0.05) 8px, rgba(255, 255, 255, 0.05) 12px, transparent 12px);
+  background-size: 60px 60px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-bg-diagonal {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg-diagonal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 20px,
+      rgba(60, 207, 145, 0.08) 20px,
+      rgba(60, 207, 145, 0.08) 21px
+    );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Hero Background */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+}
+
+.hero-grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(60, 207, 145, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(60, 207, 145, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Page Section Background */
+.page-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Large purple squares */
+    linear-gradient(rgba(147, 51, 234, 0.12), rgba(147, 51, 234, 0.12)) 15% 25% / 80px 80px no-repeat,
+    linear-gradient(rgba(139, 69, 193, 0.10), rgba(139, 69, 193, 0.10)) 75% 15% / 60px 60px no-repeat,
+    linear-gradient(rgba(124, 58, 237, 0.14), rgba(124, 58, 237, 0.14)) 85% 70% / 70px 70px no-repeat,
+    linear-gradient(rgba(109, 40, 217, 0.08), rgba(109, 40, 217, 0.08)) 25% 80% / 90px 90px no-repeat,
+    linear-gradient(rgba(168, 85, 247, 0.11), rgba(168, 85, 247, 0.11)) 60% 45% / 50px 50px no-repeat,
+    /* Large dark blue squares */
+    linear-gradient(rgba(30, 58, 138, 0.10), rgba(30, 58, 138, 0.10)) 10% 60% / 75px 75px no-repeat,
+    linear-gradient(rgba(37, 99, 235, 0.08), rgba(37, 99, 235, 0.08)) 90% 30% / 65px 65px no-repeat,
+    linear-gradient(rgba(29, 78, 216, 0.12), rgba(29, 78, 216, 0.12)) 45% 10% / 85px 85px no-repeat,
+    linear-gradient(rgba(59, 130, 246, 0.09), rgba(59, 130, 246, 0.09)) 30% 55% / 55px 55px no-repeat,
+    linear-gradient(rgba(79, 70, 229, 0.11), rgba(79, 70, 229, 0.11)) 70% 85% / 95px 95px no-repeat,
+    /* Small accent squares - mixed colors */
+    linear-gradient(rgba(196, 181, 253, 0.08), rgba(196, 181, 253, 0.08)) 50% 30% / 30px 30px no-repeat,
+    linear-gradient(rgba(165, 180, 252, 0.07), rgba(165, 180, 252, 0.07)) 20% 40% / 25px 25px no-repeat,
+    linear-gradient(rgba(199, 210, 254, 0.06), rgba(199, 210, 254, 0.06)) 80% 60% / 35px 35px no-repeat,
+    /* Additional medium squares for depth */
+    linear-gradient(rgba(91, 33, 182, 0.09), rgba(91, 33, 182, 0.09)) 35% 15% / 45px 45px no-repeat,
+    linear-gradient(rgba(67, 56, 202, 0.10), rgba(67, 56, 202, 0.10)) 80% 40% / 40px 40px no-repeat,
+    linear-gradient(rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.08)) 15% 75% / 38px 38px no-repeat,
+    /* Base background */
+    var(--bg-primary);
+  z-index: -1;
+} 

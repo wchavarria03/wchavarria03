@@ -1,0 +1,191 @@
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .projects-grid-wrapper {
+    height: 620px;
+  }
+
+  .project-title-modern {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navigation */
+  .nav {
+    justify-content: space-between;
+  }
+  
+  .nav-pill-container {
+    position: fixed;
+    top: 100%;
+    left: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: var(--glow);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    gap: 0.5rem;
+  }
+
+  /* Projects */
+  .projects-grid-wrapper {
+    width: 100%;
+  }
+
+  .projects-grid-modern {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card-modern {
+    padding: 1.5rem;
+  }
+
+  .project-title-modern {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-description-modern {
+    margin-bottom: 1.25rem;
+  }
+
+  .project-tech-modern {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skill-category-card {
+    padding: 1.5rem;
+  }
+
+  /* Hero */
+  .hero-container {
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero-contact {
+    padding-top: 1.5rem;
+  }
+
+  .hero-footer-links {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .hero-footer-link {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+
+  /* About */
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .about-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .profile-image {
+    margin: 0 auto;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Setup and Contact */
+  .setup-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .setup-section {
+    padding: 1.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-method {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 1rem;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About page mobile styles */
+  .about-layout {
+    gap: 1.5rem;
+  }
+
+  .about-page h1 {
+    font-size: 2rem;
+  }
+
+  .profile-image svg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .page {
+    padding: 1rem 0;
+  }
+
+  .experience-item,
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-link {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+} 
