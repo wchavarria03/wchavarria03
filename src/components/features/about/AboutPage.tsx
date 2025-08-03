@@ -1,4 +1,5 @@
 import { portfolioData } from "../../../data/api";
+import { getExperienceString } from "../../../lib/utils/experience";
 
 export class AboutPage {
   static render(): string {
@@ -43,7 +44,7 @@ export class AboutPage {
               <div class="highlight-item">
                 <div class="highlight-icon">⏰</div>
                 <div class="highlight-content">
-                  <h4>9+ Years Experience</h4>
+                  <h4>${getExperienceString()} Experience</h4>
                   <p>Extensive experience in full-stack development</p>
                 </div>
               </div>

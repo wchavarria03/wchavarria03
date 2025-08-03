@@ -1,13 +1,14 @@
 import type { PortfolioData } from '../types'
+import { getBioWithExperience } from '../lib/utils/experience'
 
 // Portfolio data - customize this with your information
 export const portfolioData: PortfolioData = {
   name: "Walter Chavarria",
   title: "Staff Engineer",
-  bio: "Experienced Staff Engineer with over 9 years of software development experience, specializing in full-stack development, AI/ML technologies, and leading multi-team initiatives. Passionate about teaching and sharing knowledge with others.",
+  bio: getBioWithExperience(),
   aboutDetails: [
     "I am a proactive person who spends my free time reading about new technologies and creating demo examples. I really enjoy teaching and sharing my knowledge with others, complemented with activities like cycling and working out at the gym to clear my mind and stay healthy.",
-    "Currently serving as Staff Engineer where I spearhead multi-year, multi-team product and platform initiatives. My expertise spans Ruby on Rails, Python, Natural Language Processing, Large Language Models, and Go programming. I'm a passionate Neovim user and Lua programmer, crafting efficient development environments and custom tools.",
+    "Currently serving as Staff Engineer where I spearhead multi-year, multi-team product and platform initiatives. My expertise spans JavaScript, Go, Python, Natural Language Processing, Large Language Models, and Ruby on Rails programming. I'm a passionate Neovim user and Lua programmer, crafting efficient development environments and custom tools.",
     "With extensive experience across multiple companies, I've developed a strong foundation in front-end development and responsive web design. I'm currently exploring Web3 technologies including Solidity and Ethereum development. I hold certifications in Generative AI for Software Development and Team Software Engineering with AI."
   ],
   email: "wchavarria03@gmail.com",
