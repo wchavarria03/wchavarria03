@@ -22,7 +22,7 @@
   align-items: center;
   min-height: 60vh;
   position: relative;
-  z-index: 1;
+  z-index: var(--z-elevate);
 }
 
 .about-image {
@@ -52,7 +52,7 @@
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
-  z-index: -1;
+  z-index: var(--z-negative);
 }
 
 .profile-image:hover {

@@ -4,8 +4,7 @@
  * All responsive styles have been moved to modular files in main.css
  */
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+/* Google Fonts imported via _reset.css in main.css */
 
 /* Reset and base styles */
 * {
@@ -126,14 +125,12 @@
 }
 
 /*
- * NOTE: For component styles, layouts, and responsive design,
- * use the modular CSS files imported through main.css:
+ * IMPORTANT: For optimal performance and maintainability,
+ * use main.css which imports modular files in the correct order:
  * 
- * - Base: _variables.css, _reset.css, _animations.css
- * - Components: _buttons.css, _navigation.css
- * - Features: _about.css, _hero.css, _projects.css, _skills.css
- * - Layout: _container.css, _footer.css, _sections.css
- * - Utils: _backgrounds.css, _helpers.css, _responsive.css
+ * ✅ RECOMMENDED: Import main.css in your project
+ * ❌ DEPRECATED: Importing this global.css file directly
  * 
- * All modular files have been converted to mobile-first approach.
+ * All modular files follow mobile-first responsive design principles
+ * with consistent breakpoints: 481px, 769px, 1025px, 1201px+
  */

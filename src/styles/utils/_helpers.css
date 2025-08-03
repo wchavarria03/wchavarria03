@@ -110,12 +110,14 @@
 .opacity-100 { opacity: 1; }
 
 /* Z-index */
+.z-negative { z-index: var(--z-negative); }
 .z-0 { z-index: 0; }
-.z-10 { z-index: 10; }
-.z-20 { z-index: 20; }
-.z-30 { z-index: 30; }
-.z-40 { z-index: 40; }
-.z-50 { z-index: 50; }
+.z-elevate { z-index: var(--z-elevate); }
+.z-sticky { z-index: var(--z-sticky); }
+.z-drawer { z-index: var(--z-drawer); }
+.z-modal { z-index: var(--z-modal); }
+.z-popover { z-index: var(--z-popover); }
+.z-maximum { z-index: var(--z-maximum); }
 
 /* Width & Height */
 .w-full { width: 100%; }

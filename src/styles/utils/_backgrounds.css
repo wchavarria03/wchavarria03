@@ -13,9 +13,16 @@
   bottom: 0;
   background-image: 
     radial-gradient(circle at 2px 2px, rgba(60, 207, 145, 0.15) 1px, transparent 0);
-  background-size: 40px 40px;
+  background-size: 30px 30px;
   z-index: 0;
   pointer-events: none;
+}
+
+/* Tablet and desktop enhancements */
+@media (min-width: 769px) {
+  .section-bg-dots::before {
+    background-size: 40px 40px;
+  }
 }
 
 .section-bg-grid {
@@ -33,7 +40,7 @@
   background-image: 
     linear-gradient(rgba(60, 207, 145, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(60, 207, 145, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-size: 40px 40px;
   z-index: 0;
   pointer-events: none;
 }
@@ -51,8 +58,8 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 50% 50%, transparent 8px, rgba(255, 255, 255, 0.05) 8px, rgba(255, 255, 255, 0.05) 12px, transparent 12px);
-  background-size: 60px 60px;
+    radial-gradient(circle at 50% 50%, transparent 6px, rgba(255, 255, 255, 0.05) 6px, rgba(255, 255, 255, 0.05) 10px, transparent 10px);
+  background-size: 50px 50px;
   z-index: 0;
   pointer-events: none;
 }
@@ -73,12 +80,36 @@
     repeating-linear-gradient(
       45deg,
       transparent,
-      transparent 20px,
-      rgba(60, 207, 145, 0.08) 20px,
-      rgba(60, 207, 145, 0.08) 21px
+      transparent 15px,
+      rgba(60, 207, 145, 0.08) 15px,
+      rgba(60, 207, 145, 0.08) 16px
     );
   z-index: 0;
   pointer-events: none;
+}
+
+/* Add desktop enhancements */
+@media (min-width: 769px) {
+  .section-bg-grid::before {
+    background-size: 50px 50px;
+  }
+
+  .section-bg-hexagon::before {
+    background-image: 
+      radial-gradient(circle at 50% 50%, transparent 8px, rgba(255, 255, 255, 0.05) 8px, rgba(255, 255, 255, 0.05) 12px, transparent 12px);
+    background-size: 60px 60px;
+  }
+
+  .section-bg-diagonal::before {
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(60, 207, 145, 0.08) 20px,
+        rgba(60, 207, 145, 0.08) 21px
+      );
+  }
 }
 
 /* Hero Background */
