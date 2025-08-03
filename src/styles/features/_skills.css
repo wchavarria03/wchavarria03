@@ -1,21 +1,23 @@
-/* Skills Page */
+/* Skills Page - Mobile First */
+
+/* Base mobile styles */
 .skills-page-modern {
   position: relative;
 }
 
 .skills-subtitle {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-family: var(--font-primary);
   opacity: 0.8;
 }
 
 .skills-categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -23,7 +25,7 @@
   background: rgba(255, 255, 255, 0.09);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1.5rem;
   transition: all 0.3s ease;
 }
 
@@ -41,7 +43,7 @@
 }
 
 .skill-category-title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: var(--text-primary);
   margin: 0;
@@ -94,14 +96,14 @@
 .skills-sections {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .skills-section {
   background: transparent;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   border: 2px solid var(--primary-color);
   box-shadow: var(--glow);
@@ -115,7 +117,7 @@
 }
 
 .skills-section-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--accent-color);
   margin-bottom: 1.5rem;
@@ -126,7 +128,7 @@
 
 .skill-item {
   background: transparent;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 0.75rem;
   transition: var(--transition);
   text-align: center;
@@ -148,8 +150,8 @@
 /* Skills Grid */
 .skills-grid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
 }
 
 .skill-category {
@@ -160,6 +162,75 @@
   margin-bottom: 0;
 }
 
+/* Tablet styles */
+@media (min-width: 481px) {
+  .skills-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-category-card {
+    padding: 2rem;
+  }
+
+  .skill-category-title {
+    font-size: 1.25rem;
+  }
+
+  .skills-sections {
+    gap: 2.5rem;
+  }
+
+  .skills-section {
+    padding: 2rem;
+  }
+
+  .skills-section-title {
+    font-size: 1.75rem;
+  }
+
+  .skill-item {
+    padding: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .skills-subtitle {
+    margin-bottom: 3rem;
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .skills-sections {
+    gap: 3rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1025px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet specific adjustments for iPad Pro */
 @media screen and (min-width: 768px) and (max-width: 1024px),
        screen and (min-width: 1024px) and (max-height: 1366px) {
   .skills-grid {
