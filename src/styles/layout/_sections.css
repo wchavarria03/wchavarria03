@@ -109,11 +109,11 @@
 /* Tablet styles */
 @media screen and (min-width: 769px) {
   .page-section {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
   }
 
   .page-section + .page-section {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .section-inner {
@@ -145,11 +145,11 @@
 /* Large tablet / Desktop */
 @media screen and (min-width: 1025px) {
   .page-section {
-    padding: 5rem 0;
+    padding: 3rem 0;
   }
 
   .page-section + .page-section {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
   }
 
   .section {
