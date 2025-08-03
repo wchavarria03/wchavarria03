@@ -257,14 +257,16 @@
 }
 
 /* Tablet styles */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .page.hero-page-modern {
+    margin-top: 10rem;
+  }
+}
+
 @media screen and (min-width: 481px) {
   .page-section.hero-section {
     min-height: calc(100vh - var(--header-height));
     padding: 2rem 0 3rem 0;
-  }
-
-  .page.hero-page-modern {
-    margin-top: 10rem;
   }
 
   .hero-container-modern {
@@ -347,6 +349,10 @@
 @media screen and (min-width: 1025px) {
   .page-section.hero-section {
     padding: 0;
+  }
+
+  .page.hero-page-modern {
+    margin-top: 0;
   }
 
   .hero-container-modern {
