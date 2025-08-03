@@ -86,6 +86,13 @@ export const portfolioData: PortfolioData = {
       pinned: true
     },
     {
+      title: "Personal Portfolio Website",
+      description: "Modern, responsive portfolio website built with TypeScript and Vite. Features dynamic project carousel, interactive animations, and mobile-first design. Implements advanced CSS techniques, semantic HTML, and optimized performance. Showcases full-stack development skills with clean architecture and modern web development best practices.",
+      technologies: ["TypeScript", "HTML", "CSS", "JavaScript", "Vite"],
+      githubUrl: "https://github.com/wchavarria03/wchavarria03",
+      lastUpdated: "2025-08-02",
+    },
+    {
       title: "AI Rules Engine",
       description: "Intelligent rules engine that leverages machine learning to dynamically adapt and optimize business rules. Includes pattern recognition, anomaly detection, and automated decision-making capabilities.",
       technologies: ["Python", "TensorFlow", "scikit-learn", "FastAPI", "PostgreSQL"],
