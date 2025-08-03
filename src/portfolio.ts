@@ -5,40 +5,27 @@ import { SkillsPage } from './components/features/skills/SkillsPage';
 import { BlogPage } from './components/features/blog/BlogPage';
 import { portfolioData } from './data/api';
 
-// Add this script to handle carousel transitions
-const script = document.createElement('script');
-script.textContent = `
-  function handlePageChange(newPage, currentPage) {
-    if (newPage === currentPage) return;
-    
-    const projectsSection = document.getElementById('projects');
-    if (!projectsSection) return;
-    
-    const grid = document.getElementById('projectsGrid');
-    if (!grid) return;
-    
-    // Update content
-    projectsSection.innerHTML = ProjectsPage.render(newPage);
-    
-    // Initialize any new elements
-    const newGrid = document.getElementById('projectsGrid');
-    if (newGrid) {
-      requestAnimationFrame(() => {
-        newGrid.style.opacity = '1';
-      });
-    }
+// Handle carousel transitions
+function handlePageChange(newPage: number, currentPage: number) {
+  if (newPage === currentPage) return;
+  
+  const projectsSection = document.getElementById('projects');
+  if (!projectsSection) return;
+  
+  // Update content
+  projectsSection.innerHTML = ProjectsPage.render(newPage);
+  
+  // Initialize any new elements
+  const newGrid = document.getElementById('projectsGrid');
+  if (newGrid) {
+    requestAnimationFrame(() => {
+      newGrid.style.opacity = '1';
+    });
   }
+}
 
-  // Initialize grid position
-  document.addEventListener('DOMContentLoaded', () => {
-    const grid = document.getElementById('projectsGrid');
-    if (grid) {
-      grid.style.opacity = '1';
-      grid.style.transform = 'translateX(0)';
-    }
-  });
-`;
-document.head.appendChild(script);
+// Make handlePageChange globally available
+(window as any).handlePageChange = handlePageChange;
 
 export function initializePortfolio() {
   const app = document.getElementById('app');
