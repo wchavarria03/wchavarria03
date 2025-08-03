@@ -1,4 +1,6 @@
-/* Hero Section */
+/* Hero Section - Mobile First */
+
+/* Base mobile styles */
 .hero-background {
   position: absolute;
   top: 0;
@@ -9,99 +11,20 @@
 }
 
 .page-section.hero-section {
-  min-height: calc(100vh - var(--header-height));
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 2rem 0;
 }
 
 .hero-container-modern {
   width: 100%;
   max-width: var(--container-max-width);
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-/* Tablet and mobile adjustments */
-@media screen and (max-width: 1024px) {
-  .hero-page-modern {
-    min-height: auto;
-    padding: 3rem 0;
-  }
-
-  .container.hero-container-modern {
-    padding: 1.5rem;
-    gap: 1.5rem;
-    max-width: 720px;
-  }
-
-  .hero-name-modern {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
-  }
-
-  .hero-bio-modern {
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .hero-actions {
-    justify-content: center;
-    margin-top: 1.5rem;
-  }
-
-  .hero-stats {
-    justify-content: center;
-  }
-}
-
-/* Mobile specific adjustments */
-@media screen and (max-width: 480px) {
-  .hero-page-modern {
-    padding: 2rem 0;
-    min-height: 100vh;
-    justify-content: center;
-  }
-
-  .container.hero-container-modern {
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .hero-name-modern {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-
-  .hero-title-modern {
-    font-size: 1.5rem;
-  }
-
-  .hero-bio-modern {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    padding: 0 0.5rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-
-  .social-link-modern {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .hero-stats {
-    margin-top: 1.5rem;
-  }
 }
 
 .hero-status {
@@ -138,11 +61,12 @@
 }
 
 .hero-name-modern {
-  font-size: clamp(2.5rem, 6vw, 4.5rem); /* Slightly reduced size */
+  font-size: 2rem;
   font-weight: 700;
   margin: 0;
   font-family: var(--font-primary);
   letter-spacing: -0.03em;
+  line-height: 1.2;
 }
 
 .name-highlight {
@@ -156,7 +80,7 @@
 }
 
 .hero-title-modern {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
   margin: 0;
@@ -190,7 +114,7 @@
 }
 
 .hero-bio-modern {
-  font-size: 1.1rem; /* Slightly reduced */
+  font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.5;
   margin: 0.5rem 0;
@@ -198,6 +122,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 0.5rem;
 }
 
 .hero-stats {
@@ -205,7 +130,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  margin: 0.75rem 0;
+  margin: 1.5rem 0 0.75rem 0;
   flex-wrap: wrap;
 }
 
@@ -235,7 +160,10 @@
 }
 
 .hero-actions {
-  margin-top: 0.75rem;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .hero-social-links {
@@ -254,6 +182,8 @@
   transition: var(--transition);
   padding: 0.5rem;
   border-radius: var(--radius-sm);
+  width: 100%;
+  justify-content: center;
 }
 
 .social-link-modern:hover {
@@ -312,4 +242,72 @@
 .particle:nth-child(3n) {
   background: rgba(60, 207, 145, 0.4);
   animation-duration: 10s;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 481px) {
+  .page-section.hero-section {
+    min-height: calc(100vh - var(--header-height));
+    padding: 3rem 0;
+  }
+
+  .hero-container-modern {
+    padding: 1.5rem;
+    gap: 1.5rem;
+    max-width: 720px;
+  }
+
+  .hero-name-modern {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .hero-bio-modern {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-direction: row;
+  }
+
+  .social-link-modern {
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    margin: 0.75rem 0;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1025px) {
+  .page-section.hero-section {
+    padding: 0;
+  }
+
+  .hero-container-modern {
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .hero-name-modern {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  .hero-title-modern {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .hero-bio-modern {
+    font-size: 1.1rem;
+  }
+
+  .hero-actions {
+    margin-top: 0.75rem;
+  }
 } 
