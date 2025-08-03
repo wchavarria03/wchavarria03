@@ -67,6 +67,11 @@
   margin: 0 auto;
 }
 
+/* Add spacing after section title to match other sections */
+.about-content .section-title {
+  margin-bottom: calc(0.5rem + var(--section-spacing-lg));
+}
+
 /* Remove width constraint on tablet and desktop */
 @media (min-width: 769px) {
   .about-content {

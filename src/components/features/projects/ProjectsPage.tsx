@@ -93,19 +93,19 @@ export class ProjectsPage {
             </svg>
           </button>
           
-          <div class="carousel-dots">
-            ${Array.from({ length: totalPages }, (_, i) => `
-              <div class="carousel-dot ${i + 1 === currentPage ? 'active' : ''}" 
-                   onclick="handlePageChange(${i + 1}, ${currentPage})">
-              </div>
-            `).join('')}
-          </div>
-
           <button class="carousel-arrow next" onclick="handlePageChange(${currentPage + 1}, ${currentPage})" ${currentPage === totalPages ? 'disabled' : ''}>
             <svg viewBox="0 0 24 24" width="24" height="24">
               <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
             </svg>
           </button>
+        </div>
+        
+        <div class="carousel-dots">
+          ${Array.from({ length: totalPages }, (_, i) => `
+            <div class="carousel-dot ${i + 1 === currentPage ? 'active' : ''}" 
+                 onclick="handlePageChange(${i + 1}, ${currentPage})">
+            </div>
+          `).join('')}
         </div>
       </div>
     `;

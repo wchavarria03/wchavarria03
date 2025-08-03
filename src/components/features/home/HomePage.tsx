@@ -48,32 +48,34 @@ export class HomePage {
           
           <div class="hero-actions">
             <div class="hero-social-links">
-              <a href="${portfolioData.github}" target="_blank" rel="noopener" class="social-link-modern github">
-                <div class="social-icon github">
-                  <svg width="20" height="20">
-                    <use href="/assets/icons/sprite.svg#icon-github" />
+              <div class="social-links-row">
+                <a href="${portfolioData.github}" target="_blank" rel="noopener" class="social-link-modern github">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <use href="/assets/icons/sprite.svg#icon-github"></use>
                   </svg>
-                </div>
-                <span class="social-label">GitHub</span>
-              </a>
-              
-              <a href="${portfolioData.linkedin}" target="_blank" rel="noopener" class="social-link-modern linkedin">
-                <div class="social-icon linkedin">
-                  <svg width="20" height="20">
-                    <use href="/assets/icons/sprite.svg#icon-linkedin" />
+                  GitHub
+                </a>
+                <a href="${portfolioData.linkedin}" target="_blank" rel="noopener" class="social-link-modern linkedin">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <use href="/assets/icons/sprite.svg#icon-linkedin"></use>
                   </svg>
-                </div>
-                <span class="social-label">LinkedIn</span>
-              </a>
-              
-              <a href="mailto:${portfolioData.email}" class="social-link-modern email">
-                <div class="social-icon email">
-                  <svg width="20" height="20">
-                    <use href="/assets/icons/sprite.svg#icon-email" />
+                  LinkedIn
+                </a>
+                <a href="mailto:${portfolioData.email}" class="social-link-modern email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <use href="/assets/icons/sprite.svg#icon-email"></use>
                   </svg>
-                </div>
-                <span class="social-label">Email</span>
-              </a>
+                  Email
+                </a>
+              </div>
+              <div class="social-links-row social-links-centered">
+                <a href="mailto:${portfolioData.email}" class="social-link-modern email">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <use href="/assets/icons/sprite.svg#icon-email"></use>
+                  </svg>
+                  Email
+                </a>
+              </div>
             </div>
           </div>
         </div>

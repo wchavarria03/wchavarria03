@@ -89,27 +89,37 @@ function renderPortfolio(currentPage: number = 1) {
       <div class="container">
         <div class="footer-content">
           <div class="footer-links">
-            <a href="${portfolioData.github}" target="_blank" rel="noopener" class="footer-link">
-              <svg width="20" height="20">
-                <use href="/assets/icons/sprite.svg#icon-github" />
-              </svg>
-              GitHub
-            </a>
-            <a href="${portfolioData.linkedin}" target="_blank" rel="noopener" class="footer-link">
-              <svg width="20" height="20">
-                <use href="/assets/icons/sprite.svg#icon-linkedin" />
-              </svg>
-              LinkedIn
-            </a>
-            <a href="mailto:${portfolioData.email}" class="footer-link">
-              <svg width="20" height="20">
-                <use href="/assets/icons/sprite.svg#icon-email" />
-              </svg>
-              Email
-            </a>
+            <div class="footer-links-row">
+              <a href="${portfolioData.github}" target="_blank" rel="noopener" class="footer-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <use href="/assets/icons/sprite.svg#icon-github"></use>
+                </svg>
+                GitHub
+              </a>
+              <a href="${portfolioData.linkedin}" target="_blank" rel="noopener" class="footer-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <use href="/assets/icons/sprite.svg#icon-linkedin"></use>
+                </svg>
+                LinkedIn
+              </a>
+              <a href="mailto:${portfolioData.email}" class="footer-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <use href="/assets/icons/sprite.svg#icon-email"></use>
+                </svg>
+                Email
+              </a>
+            </div>
+            <div class="footer-links-row footer-links-centered">
+              <a href="mailto:${portfolioData.email}" class="footer-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <use href="/assets/icons/sprite.svg#icon-email"></use>
+                </svg>
+                Email
+              </a>
+            </div>
           </div>
           <div class="footer-copyright">
-            <p>&copy; ${new Date().getFullYear()} ${portfolioData.name}</p>
+            <p>&copy; <span id="current-year"></span> ${portfolioData.name}. All rights reserved.</p>
           </div>
         </div>
       </div>
@@ -257,7 +267,6 @@ export function initializeTypingAnimation() {
   const titles = [
     'Staff Engineer',
     'Full-Stack Developer', 
-    'AI/ML Enthusiast',
     'Neovim Enthusiast',
   ];
   

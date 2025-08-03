@@ -21,7 +21,7 @@ export const portfolioData: PortfolioData = {
         { name: 'Neovim' },
         { name: 'Git' },
         { name: 'Docker' },
-        { name: 'tmux' },
+        { name: 'Tmux' },
       ],
     },
     {

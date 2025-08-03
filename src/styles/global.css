@@ -113,7 +113,7 @@
   }
 
   .section-bg-diagonal::before {
-    background-image: 
+  background-image: 
       repeating-linear-gradient(
         45deg,
         transparent,

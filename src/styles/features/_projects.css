@@ -86,7 +86,8 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1rem;
-  min-height: 28px;
+  min-height: 40px;
+  height: 40px;
 }
 
 .project-status-tags {
@@ -183,6 +184,7 @@
   min-height: 68px;
   overflow: hidden;
   position: relative;
+  margin-top: 1rem;
 }
 
 .project-tech-modern::after {
@@ -226,13 +228,56 @@
   font-weight: 500;
 }
 
+/* Project Actions */
 .project-actions {
-  margin-top: auto;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1.5rem;
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.view-repository-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  min-width: 160px;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-repository-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(60, 207, 145, 0.2);
+}
+
+.view-repository-btn svg {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  transition: all 0.3s ease;
+  fill: white;
+  color: white;
+}
+
+.view-repository-btn:hover svg {
+  opacity: 1;
+  transform: translateY(-1px);
+  fill: white;
+  color: white;
 }
 
 .project-action-btn {
@@ -244,21 +289,24 @@
   padding: 0.875rem 1.5rem;
   border-radius: var(--radius-md);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-primary);
+  background: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  color: var(--bg-primary);
   min-width: 160px;
   white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(60, 207, 145, 0.3);
 }
 
 .project-action-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--accent-color);
-  transform: translateY(-1px);
-  box-shadow: var(--glow);
+  background: #4ade80;
+  border-color: #4ade80;
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(60, 207, 145, 0.4);
 }
 
 .project-action-btn svg {
@@ -447,6 +495,92 @@
 
   .section-wrapper {
     padding: 0 1rem;
+  }
+
+  /* Desktop carousel layout */
+  .projects-grid-wrapper {
+    position: relative;
+    padding: 0 5rem; /* Space for arrows */
+  }
+
+  /* Reset mobile carousel controls for desktop */
+  .carousel-controls {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    margin-top: 0;
+    height: 0;
+    overflow: visible;
+  }
+
+  /* Position arrows absolutely within the grid wrapper */
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+  }
+
+  .carousel-arrow.prev {
+    left: -5rem;
+  }
+
+  .carousel-arrow.next {
+    right: -5rem;
+  }
+
+  .carousel-arrow:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border-color: var(--accent-color);
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .carousel-arrow svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Hide dots inside carousel-controls */
+  .carousel-controls .carousel-dots {
+    display: none;
+  }
+
+  /* Style standalone dots container */
+  .projects-grid-wrapper + .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem auto 0;
+    gap: 0.75rem;
+    max-width: 1200px;
+    padding: 0;
+  }
+
+  .projects-grid-wrapper + .carousel-dots .carousel-dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .projects-grid-wrapper + .carousel-dots .carousel-dot.active {
+    transform: scale(1.3);
+    background: var(--accent-color);
+    box-shadow: 0 0 8px rgba(60, 207, 145, 0.4);
+  }
+
+  .projects-grid-wrapper + .carousel-dots .carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
   }
 }
 
