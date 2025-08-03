@@ -270,46 +270,46 @@ export function initializeTypingAnimation() {
     'Neovim Enthusiast',
   ];
   
-  let currentTitleIndex = 0;
-  let currentText = '';
+  let titleIndex = 0;
+  let charIndex = 0;
   let isDeleting = false;
-  let isFirstRun = true;
   
-  function typeWriter() {
-    const currentTitle = titles[currentTitleIndex];
+  function type() {
+    const currentTitle = titles[titleIndex];
     
-    if (isFirstRun) {
-      isFirstRun = false;
-      typingElement.textContent = '';
-    }
-    
-    const shouldSwitch = isDeleting && currentText === '';
-    
-    if (shouldSwitch) {
-      isDeleting = false;
-      currentTitleIndex = (currentTitleIndex + 1) % titles.length;
-      setTimeout(typeWriter, 500);
-      return;
-    }
-    
-    if (isDeleting) {
-      currentText = currentTitle.substring(0, currentText.length - 1);
+    if (!isDeleting) {
+      // Typing forward
+      typingElement.textContent = currentTitle.slice(0, charIndex + 1);
+      charIndex++;
+      
+      if (charIndex === currentTitle.length) {
+        // Finished typing, wait then start deleting
+        setTimeout(() => {
+          isDeleting = true;
+          type();
+        }, 1000);
+        return;
+      }
     } else {
-      currentText = currentTitle.substring(0, currentText.length + 1);
+      // Deleting backward
+      typingElement.textContent = currentTitle.slice(0, charIndex);
+      charIndex--;
+      
+      if (charIndex < 0) {
+        // Finished deleting, move to next title
+        isDeleting = false;
+        charIndex = 0;
+        titleIndex = (titleIndex + 1) % titles.length;
+        setTimeout(type, 500);
+        return;
+      }
     }
     
-    typingElement.textContent = currentText;
-    
-    let typeSpeed = isDeleting ? 100 : 150;
-    
-    if (!isDeleting && currentText === currentTitle) {
-      typeSpeed = 2000;
-      isDeleting = true;
-    }
-    
-    setTimeout(typeWriter, typeSpeed);
+    // Continue typing/deleting
+    const speed = isDeleting ? 130 : 175;
+    setTimeout(type, speed);
   }
   
-  // Start immediately
-  typeWriter();
+  // Start the animation
+  type();
 }
