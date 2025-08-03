@@ -3,7 +3,7 @@ import { compression } from 'vite-plugin-compression2'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/wchavarria03/' : '/',
+  base: '/',
   plugins: [
     compression({
       include: [/\.(js|mjs|json|css|html|svg)$/],
