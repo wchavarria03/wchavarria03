@@ -1,6 +1,6 @@
 # Hi there, I'm Walter Chavarria! 👋
 
-## 🚀 Staff Engineer | Full-Stack Developer | AI/ML Enthusiast | Neovim Lover
+## 🚀 Staff Engineer | Full-Stack Developer | Neovim Lover
 
 Welcome to my GitHub profile! I'm a passionate Staff Engineer with over 11 years of software development experience, specializing in full-stack development, AI/ML technologies, and leading multi-team initiatives.
 
@@ -11,14 +11,11 @@ Welcome to my GitHub profile! I'm a passionate Staff Engineer with over 11 years
 - Perfecting my Neovim + Lua configuration for the ultimate developer experience
 
 ### 💻 Tech Stack & Expertise
-**Languages:** JavaScript/TypeScript, Python, Go, Ruby, Lua, Solidity  
-**Frontend:** React, Next.js, HTML5, CSS3, Redux  
-**Backend:** Node.js, Express, REST APIs, Microservices  
-**Databases:** PostgreSQL, MongoDB  
-**Cloud & DevOps:** Docker, CI/CD, Git  
-**AI/ML:** Natural Language Processing, RAG Systems, LLM Integration  
-**Blockchain:** Ethereum, Web3, Smart Contracts  
-**Tools:** Neovim, Git, Testing Frameworks, Agile/Sprint Methodologies
+- **Languages:** JavaScript/TypeScript, Python, Go, Ruby, Lua, Solidity  
+- **Frontend:** React, Next.js, HTML5, CSS3, Redux  
+- **Backend:** Node.js, Express, Go, Pythong, REST APIs, Microservices  
+- **Blockchain:** Ethereum, Web3, Smart Contracts  
+- **Tools:** Neovim
 
 ### 🌟 Highlights
 - **11+ Years** of professional software development experience
